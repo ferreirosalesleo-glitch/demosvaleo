@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sporting Club Casino — Asistente virtual</title>
+  <style>
+    :root {
+      --marca: #1a2a4f;        /* color principal del club — cámbialo si quieres */
+      --marca-suave: #2d4373;
+      --fondo: #f4f6fa;
+      --texto: #1a2a4f;
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(160deg, var(--fondo) 0%, #e6ebf5 100%);
+      color: var(--texto);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+      min-height: 100%;
+    }
+    .tarjeta {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 12px 40px rgba(26, 42, 79, 0.12);
+      padding: 48px 36px;
+      max-width: 460px;
+      width: 100%;
+    }
+    .logo {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 24px;
+      border-radius: 50%;
+      background: #fff url('https://restauranteleiron.es/wp-content/uploads/2023/12/LOGO-Original-CON-LETRAS-verdes-y-fondo-transparente.png') center/contain no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+    }
+    /* Para cambiar el logo: sustituye la URL de dentro de background por la nueva. */
+    h1 {
+      font-size: 24px;
+      margin: 0 0 12px;
+      color: var(--marca);
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #5a6478;
+      margin: 0 0 8px;
+    }
+    .pie {
+      margin-top: 28px;
+      font-size: 13px;
+      color: #9aa3b5;
+    }
+    .flecha {
+      margin-top: 32px;
+      font-size: 14px;
+      color: var(--marca-suave);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="tarjeta">
+    <div class="logo"></div>
+    <h1>Sporting Club Casino</h1>
+    <p>Demo del asistente virtual. Aquí puedes probarlo.</p>
+    <div class="flecha">Pulsa el chat abajo a la derecha para empezar &#8600;</div>
+  </div>
+
+  <!-- Widget de Chatwoot -->
+  <script>
+    (function(d,t) {
+      var BASE_URL="https://automatizaciones-chatwoot.r0hzqi.easypanel.host";
+      var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=BASE_URL+"/packs/js/sdk.js";
+      g.async = true;
+      s.parentNode.insertBefore(g,s);
+      g.onload=function(){
+        window.chatwootSDK.run({
+          websiteToken: '2H8pGFhhnDA1WvKDuRY1k3qm',
+          baseUrl: BASE_URL
+        })
+      }
+    })(document,"script");
+  </script>
+</body>
+</html>
